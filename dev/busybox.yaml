@@ -20,7 +20,10 @@ spec:
       containers:
       - name: busybox
         image: busybox
+        args: ["MESSAGE_BUS"]
+        env:
+        - name: MESSAGE_BUS
+          value: "servicebus-connectionstring@azurekeyvault"
         imagePullPolicy: IfNotPresent
-        
         command: ['sh', '-c', 'echo Container 1 is Running ; sleep 3600']
       serviceAccount: app1sa
