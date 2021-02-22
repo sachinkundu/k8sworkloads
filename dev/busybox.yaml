@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: busybox
-        image: busybox
+        image: odise/busybox-curl
         args: ["MESSAGE_BUS"]
         env:
         - name: MESSAGE_BUS
